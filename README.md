@@ -1,5 +1,5 @@
 # protocol-
-### iOS Shortcuts Data Collection Pipeline — Miura N-of-1 Study
+### iOS Shortcuts EMA Data Collection Pipeline (Miura N-of-1 Study)
 
 ---
 
