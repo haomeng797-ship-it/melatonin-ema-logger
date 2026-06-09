@@ -1,30 +1,24 @@
-# protocol-
-### iOS Shortcuts EMA Data Collection Pipeline 
+# iOS Shortcuts EMA Data Collection Pipeline
 
----
+*The custom data-collection tool for a 70-day N-of-1 affect study, built in iOS Shortcuts.*
 
-## What this is
-
-Automated EMA data collection via iOS Shortcuts, feeding into a CSV for downstream analysis.
-Part of a 70-day N-of-1 behavioral self-experiment.
-
----
+Ecological momentary assessment (EMA) is collected three times a day on an iPhone via
+Shortcuts. Each entry is validated and appended to a timestamped CSV for downstream
+analysis. This repository documents the collection tool only; the cleaned data,
+analysis, and manuscript live in the companion repository
+[N-of-1-Melatonin-Study](https://github.com/haomeng797-ship-it/N-of-1-Melatonin-Study).
 
 ## Measurement
 
-**Frequency:** 3× daily (morning / afternoon / evening)
-
-**Each entry captures:**
+Three prompts per day (morning, afternoon, evening). Each entry records:
 
 | Variable | Prompt | Scale |
 |---|---|---|
-| `mood` | Current emotional valence | 0–100 |
-| `agency` | Task progress feeling | 0–100 |
-| `metacognition` | Awareness of current state | 0–100 |
-| `melatonin_taken` | Melatonin taken? | 0 / 1 |
-| `override_reason` | Deviation note | text |
-
----
+| `mood` | current emotional valence | 0–100 |
+| `agency` | sense of task progress | 0–100 |
+| `metacognition` | awareness of current state | 0–100 |
+| `melatonin_taken` | melatonin taken last night? | 0 / 1 |
+| `override_reason` | deviation note | free text |
 
 ## Output
 
@@ -35,29 +29,25 @@ timestamp, mood, agency, metacognition, melatonin_taken, override_reason
 2026-03-07T10:00:00-05:00, 72, 65, 80, 1, N/A
 ```
 
----
+## Repository layout
 
-## Files
-
-```
-protocol-/
-├── data/
-│   └── Miura_Data.csv       ← raw EMA output
-├── src/
-│   └── data_logger.py       ← validation & manual fallback entry
-└── schedule.json            ← 70-day randomized melatonin protocol
-```
-
----
+- `data/Miura_Data.csv`: raw EMA output appended by the Shortcut
+- `src/data_logger.py`: Python validation and manual-fallback entry
+- `schedule.json`: pre-registered 70-day randomized melatonin schedule
 
 ## Validation
 
+Run from the repository root, after an entry or in batch:
+
 ```bash
-python src/data_logger.py validate
+python src/data_logger.py validate   # out-of-range values, missing entries, duplicate timestamps
 ```
 
-Checks for out-of-range values, missing entries, and duplicate timestamps.
+## Companion repository
 
----
+Full study design, cleaned data, analysis, and manuscript:
+[N-of-1-Melatonin-Study](https://github.com/haomeng797-ship-it/N-of-1-Melatonin-Study).
 
-*Full study design and analysis: [N-of-1-Melatonin-Study](https://github.com/haomeng797-ship-it/N-of-1-Melatonin-Study)*
+## License
+
+Released under CC-BY 4.0.
