@@ -8,6 +8,15 @@ analysis. This repository documents the collection tool only; the cleaned data,
 analysis, and manuscript live in the companion repository
 [N-of-1-Melatonin-Study](https://github.com/haomeng797-ship-it/N-of-1-Melatonin-Study).
 
+## The Shortcut
+
+The full flow, top to bottom: read the pre-registered schedule for the current
+study day, prompt for mood, agency, and metacognition, resolve the melatonin
+condition (follow the schedule or record a manual override), then append a
+timestamped row to the CSV.
+
+<img src="assets/shortcut_flow.png" alt="iOS Shortcut flow, full sequence" width="600">
+
 ## Measurement
 
 Three prompts per day (morning, afternoon, evening). Each entry records:
