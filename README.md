@@ -15,6 +15,10 @@ study day, prompt for mood, agency, and metacognition, resolve the melatonin
 condition (follow the schedule or record a manual override), then append a
 timestamped row to the CSV.
 
+**Install:** open the [Shortcut on iCloud](https://www.icloud.com/shortcuts/6d4fb706f1304f08bb2da3739b9d66b6)
+on an iPhone to add it to your own Shortcuts app, then point the final
+"Append to File" step at your own CSV.
+
 <img src="assets/shortcut_flow.png" alt="iOS Shortcut flow, full sequence" width="600">
 
 ## Measurement
