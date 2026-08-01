@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.xccheckout
+*.xcscmblueprint
+
+# Python
+__pycache__/
+*.pyc
+
+# Collected data stays local
+data/*.csv
