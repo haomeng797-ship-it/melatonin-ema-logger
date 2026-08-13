@@ -30,9 +30,10 @@ close to zero: the prompt appears on its own, and answering never requires openi
 an app. That property, more than any feature, is where the compliance rate came
 from.
 
-Its limit is distribution. A Shortcut cannot be installed as a study instrument.
-Each participant has to duplicate it and edit a file path by hand, there is no
-version to cite in a paper, and the logic cannot be reviewed line by line.
+Its limit is deployment. The Shortcut can be shared by link, but it is not readily
+deployable across participants without individual setup: each person has to duplicate
+it and point the final step at their own file, and there is no versioned artifact to
+cite in a paper.
 
 Validation and manual-entry fallback for the Shortcut's CSV:
 
