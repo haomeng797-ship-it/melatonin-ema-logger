@@ -95,4 +95,4 @@ Three prompts per day (morning, afternoon, evening). Each entry records:
 
 ## License
 
-Released under CC-BY 4.0.
+Released under the MIT License. See `LICENSE`.
